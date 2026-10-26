@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" style="background:#07090e; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Top Navigation Bar -->
+  <rect x="20" y="15" width="960" height="50" rx="6" fill="#0f141e" stroke="#1e293b"/>
+  <text x="40" y="46" fill="#06b6d4" font-size="18" font-weight="700">ARINC712Forge Pro (v1.0.0) — Mark 3 Airborne ADF &amp; RMI Station</text>
+  <rect x="760" y="26" width="200" height="28" rx="4" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981"/>
+  <text x="775" y="45" fill="#10b981" font-size="11" font-weight="700">TSO-C41d / DO-179 PASS</text>
+
+  <!-- Cockpit Bezel Left Panel -->
+  <rect x="20" y="80" width="350" height="500" rx="8" fill="#0f141e" stroke="#1e293b" filter="url(#shadow2)"/>
+  
+  <!-- ADF / RMI Gauge Dial -->
+  <circle cx="195" cy="205" r="105" fill="#020617" stroke="#334155" stroke-width="2"/>
+  <circle cx="195" cy="205" r="95" fill="transparent" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,6"/>
+  
+  <!-- Lubber Line (Nose 000) -->
+  <line x1="195" y1="102" x2="195" y2="114" stroke="#f59e0b" stroke-width="4"/>
+
+  <!-- Rotating ADF Needle (45 deg) -->
+  <g transform="rotate(45, 195, 205)">
+    <line x1="195" y1="115" x2="195" y2="295" stroke="#06b6d4" stroke-width="3"/>
+    <polygon points="195,108 189,122 201,122" fill="#06b6d4"/>
+  </g>
+  <circle cx="195" cy="205" r="7" fill="#334155" stroke="#06b6d4" stroke-width="2"/>
+
+  <!-- Readout Badges below gauge -->
+  <rect x="40" y="325" width="310" height="65" rx="4" fill="#18202c" stroke="#334155"/>
+  <text x="55" y="348" fill="#cbd5e1" font-family="'SF Mono', monospace" font-size="11">RELATIVE BEARING: 045.0°  ·  HEADING: 120.0°</text>
+  <text x="55" y="368" fill="#34d399" font-family="'SF Mono', monospace" font-size="11" font-weight="700">MAGNETIC BEARING: 165.0° (QDM INBOUND)</text>
+  <text x="55" y="383" fill="#fbbf24" font-size="10">IDENT: DXB (-.. -..- -...) @ 1020 Hz BFO</text>
+
+  <!-- Control Buttons -->
+  <rect x="40" y="400" width="70" height="32" rx="3" fill="#1e293b" stroke="#06b6d4"/>
+  <text x="58" y="420" fill="#f8fafc" font-size="11" font-weight="700">ADF</text>
+
+  <rect x="120" y="400" width="70" height="32" rx="3" fill="#18202c" stroke="#334155"/>
+  <text x="140" y="420" fill="#94a3b8" font-size="11" font-weight="700">ANT</text>
+
+  <rect x="200" y="400" width="70" height="32" rx="3" fill="#18202c" stroke="#334155"/>
+  <text x="220" y="420" fill="#94a3b8" font-size="11" font-weight="700">BFO</text>
+
+  <rect x="280" y="400" width="70" height="32" rx="3" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b"/>
+  <text x="290" y="420" fill="#fbbf24" font-size="10" font-weight="700">LOOP</text>
+
+  <!-- Presets -->
+  <rect x="40" y="440" width="95" height="32" rx="3" fill="#1e293b" stroke="#334155"/>
+  <text x="55" y="460" fill="#f8fafc" font-size="10" font-weight="600">DXB (385k)</text>
+
+  <rect x="145" y="440" width="95" height="32" rx="3" fill="#1e293b" stroke="#334155"/>
+  <text x="155" y="460" fill="#f8fafc" font-size="10" font-weight="600">LOM (332k)</text>
+
+  <rect x="250" y="440" width="100" height="32" rx="3" fill="#1e293b" stroke="#334155"/>
+  <text x="260" y="460" fill="#f8fafc" font-size="10" font-weight="600">ZAY (412k)</text>
+
+  <!-- Antenna Goniometer Status -->
+  <rect x="40" y="480" width="310" height="85" rx="6" fill="#18202c" stroke="#334155"/>
+  <text x="55" y="502" fill="#38bdf8" font-size="11" font-weight="700">CARDIOID GONIOMETER VOLTAGES</text>
+  <text x="55" y="522" fill="#cbd5e1" font-size="11">Loop X: +0.707 V · Loop Y: +0.707 V</text>
+  <text x="55" y="540" fill="#cbd5e1" font-size="11">Sense Antenna: +1.000 V (90° Phase Shift)</text>
+  <text x="55" y="558" fill="#34d399" font-size="10">Cardioid Null Depth: 0.293 (Unambiguous Lock)</text>
+
+  <!-- Right: ARINC 429 Words & 10-Point Auditor -->
+  <rect x="390" y="80" width="590" height="235" rx="8" fill="#0f141e" stroke="#1e293b" filter="url(#shadow2)"/>
+  <text x="410" y="110" fill="#06b6d4" font-size="13" font-weight="700">ARINC 429 DIGITAL AVIONICS BUS &amp; TELEMETRY</text>
+  
+  <rect x="410" y="125" width="550" height="28" fill="rgba(255,255,255,0.03)"/>
+  <text x="420" y="144" fill="#38bdf8" font-size="11" font-family="'SF Mono', monospace">Label 032  0x60385058  Tuning: 385.0 kHz    Parity: ODD (PASS)</text>
+
+  <rect x="410" y="155" width="550" height="28" fill="transparent"/>
+  <text x="420" y="174" fill="#34d399" font-size="11" font-family="'SF Mono', monospace">Label 162  0x6010014E  Rel Bearing: 045.0°  Parity: ODD (PASS)</text>
+
+  <rect x="410" y="185" width="550" height="28" fill="rgba(255,255,255,0.03)"/>
+  <text x="420" y="204" fill="#fbbf24" font-size="11" font-family="'SF Mono', monospace">Label 270  0xE000011D  Status: ADF Mode ON  Parity: ODD (PASS)</text>
+
+  <rect x="410" y="215" width="550" height="28" fill="transparent"/>
+  <text x="420" y="234" fill="#38bdf8" font-size="11" font-family="'SF Mono', monospace">Label 350  0x60000117  BITE Maintenance OK  Parity: ODD (PASS)</text>
+
+  <rect x="410" y="245" width="550" height="28" fill="rgba(255,255,255,0.03)"/>
+  <text x="420" y="264" fill="#c084fc" font-size="11" font-family="'SF Mono', monospace">Navigation Fix: QDM 165.0° Inbound · QDR 345.0° Outbound</text>
+
+  <!-- Right Bottom: 10-Point Normative Auditor -->
+  <rect x="390" y="335" width="590" height="245" rx="8" fill="#0f141e" stroke="#1e293b" filter="url(#shadow2)"/>
+  <text x="410" y="365" fill="#10b981" font-size="13" font-weight="700">10-POINT NORMATIVE AUDITOR (10/10 PASSED - 100%)</text>
+
+  <text x="410" y="395" fill="#cbd5e1" font-size="11">[PASSED] A712_01: Dual Independent ADF Receiver Architecture (SDI 1/2)</text>
+  <text x="410" y="420" fill="#cbd5e1" font-size="11">[PASSED] A712_02: ARINC 429 Bit 32 Odd Parity Rule on Tuning &amp; Bearing</text>
+  <text x="410" y="445" fill="#cbd5e1" font-size="11">[PASSED] A712_03: LF/MF Aeronautical NDB Tuning Coverage (190–1750 kHz)</text>
+  <text x="410" y="470" fill="#cbd5e1" font-size="11">[PASSED] A712_04: Crossed-Loop &amp; Sense Antenna Cardioid Null Resolution</text>
+  <text x="410" y="495" fill="#cbd5e1" font-size="11">[PASSED] A712_05: Relative Bearing to Magnetic Bearing Integration</text>
+  <text x="410" y="520" fill="#cbd5e1" font-size="11">[PASSED] A712_06: Beat Frequency Oscillator (BFO) Continuous Wave Audio</text>
+  <text x="410" y="545" fill="#cbd5e1" font-size="11">[PASSED] A712_07: ANT Mode Sense-Only Audio Reception &amp; NCD Flag State</text>
+</svg>
